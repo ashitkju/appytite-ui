@@ -1,0 +1,9 @@
+.img-blur {
+    mask-image: linear-gradient(to right, transparent, var(--lightblue) 100%);
+}
+
+.banner-text {
+    color: var(--darkblue);
+    font-weight: bold;
+    letter-spacing: 0.1em;
+}
