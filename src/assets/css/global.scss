@@ -1,0 +1,38 @@
+:root {
+    background: linear-gradient(#ffbebe, #bfc3f1, #5b81c7);
+    background-repeat: no-repeat;
+    margin: 0px;
+    padding: 0px;
+    height: 100%;
+}
+
+.primary-button {
+    background-color: var(--primarytextcolor);
+    color: var(--white);
+    text-align: center;
+    padding: 0.3em 1em;
+    border-radius: 2em;
+}
+
+.primary-button:hover {
+    background-color: var(--white);
+    color: var(--primarytextcolor);
+    text-align: center;
+    padding: 0.3em 1em;
+    border-radius: 2em;
+}
+
+dialog {
+    background-image: linear-gradient(135deg, #5b81c7, #ffbebe);
+    box-shadow: 1px 1px 20px 12px gainsboro;
+    border-radius: 20px;
+}
+
+dialog::backdrop {
+    background-color: beige;
+    opacity: 0.6;
+}
+
+.field {
+    padding-bottom: 0.5em;
+}

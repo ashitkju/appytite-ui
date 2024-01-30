@@ -1,11 +1,45 @@
 <!-- navbar.component.html -->
 
 <nav class="navbar">
-    <ul class="nav-list">
-      <li class="nav-item"><a class="button" routerLink="/">Home</a></li>
-      <li class="nav-item"><a class="button" routerLink="/about">About</a></li>
-      <li class="nav-item"><a class="button" routerLink="/contact">Contact</a></li>
-      <!-- Add more links as needed -->
-    </ul>
-  </nav>
-  
+  <ul class="nav-list">
+    <li class="nav-item nav-item-left"><a class="button" routerLink="/home" routerLinkActive="active-link">Home</a></li>
+    <li class="nav-item nav-item-left"><a class="button" routerLink="/about" routerLinkActive="active-link">About</a>
+    </li>
+    <li class="nav-item nav-item-left"><a class="button" routerLink="/contact"
+        routerLinkActive="active-link">Contact</a></li>
+    <!-- Add more links as needed -->
+
+    <div class="right">
+      <li class="nav-item"><a class="button primary-button" (click)="authDialog.showModal()">Login</a></li>
+    </div>
+  </ul>
+</nav>
+
+
+<dialog class="dialogBox" #authDialog>
+  <div class="dialogHeader">
+    <span class="title">Login</span>
+    <div class="w-full">
+      <img src="assets/img/close.svg" class="close-icon" alt="close-icon" (click)="authDialog.close()" />
+    </div>
+  </div>
+  <div class="dialogBody">
+    <div class="grid p-3">
+      <div class="field">
+        <span class="textbox-label">Username</span>
+        <input type="text" class="text-box" />
+      </div>
+      <div class="field">
+        <span class="textbox-label">Password</span>
+        <input type="password" class="text-box" />
+      </div>
+      <a href="/">Forgot Password?</a>
+      <a href="/">Dont have an account yet?</a>
+    </div>
+  </div>
+  <div class="dialogFooter">
+    <button (click)="authDialog.close()" class="button primary-button">
+      Login
+    </button>
+  </div>
+</dialog>
